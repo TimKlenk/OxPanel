@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title %}Masterdata{% endblock %}
+
+{% block body %}
+    {% include'panel/navigation.html.twig'%}
+    <div class="row">
+        <div class="text-center">
+            <p class="lead">Firstname: <em>{{masterdata.getFirstname}}</em></p>
+            <p class="lead">Lastname: <em>{{masterdata.getLastname}}</em></p>
+            <p class="lead">E-Mail: <em>{{masterdata.getUsername}}</em></p>
+            <p class="lead">Company: <em>{{masterdata.getCompany}}</em></p>
+            <p class="lead">Streetname: <em>{{masterdata.getSteetname}}</em></p>
+            <p class="lead">Streetnumber: <em>{{masterdata.getStreetnumber}}</em></p>
+            <p class="lead">City: <em>{{masterdata.getCity}}</em></p>
+        </div>
+    </div>
+
+    <p><a data-open="changeMasterdataModal" class="button">Edit Masterdata</a></p>
+
+    <div class="reveal" id="changeMasterdataModal" data-reveal>
+        <h1>Edit Masterdata</h1>
+        <p class="lead">You can edit your Masterdata here!</p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

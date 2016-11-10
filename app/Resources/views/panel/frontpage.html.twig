@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+{% block body %}
+    {% include'panel/navigation.html.twig'%}
+        Hi {{ customer.getFirstname }}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+{% endblock %}

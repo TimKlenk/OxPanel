@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+{% block body %}
+    {% include'panel/navigation.html.twig'%}
+<table>
+    <caption>Order overview</caption>
+    <thead>
+    <tr>
+        <th >Order Number</th>
+        <th>Date</th>
+        <th >Billing Email</th>
+        <th >Article</th>
+        <th >Description</th>
+        <th >Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in order %}
+    <tr>
+        <td>
+            {{ item.getOrderId }}
+        </td>
+        <td>
+            {{ item.getDate }}
+        </td>
+        <td>
+            {{ item.getBillingEmail }}
+        </td>
+            {% for article in item.getArticle%}
+                    <td>{{ article.getArticleTitle }}</td>
+                    <td>{{ article.getArtDesc }}</td>
+                    <td>{{ article.getPrice }}</td>
+            {% endfor %}
+    <tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}
