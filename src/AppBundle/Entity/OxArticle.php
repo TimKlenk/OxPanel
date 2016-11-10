@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Tim Klenk
- * Date: 18.10.2016
- * Time: 10:18
- */
 namespace AppBundle\Entity;
 class OxArticle
 {
