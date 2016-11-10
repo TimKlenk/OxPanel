@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Tim Klenk
- * Date: 18.10.2016
- * Time: 11:59
- */
+
 
 namespace AppBundle\Repository;
 use AppBundle\Database\OxPdo;
